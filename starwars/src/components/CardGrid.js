@@ -25,7 +25,7 @@ export default function CardGrid() {
     return (
         <Grid >
             {people.map((person) =>
-                <SWCard name={person.name} gender={person.gender}/>
+                <SWCard key = {person.name} name={person.name} gender={person.gender} numFilms={person.films.length}/>
             )}
         </Grid >
     )
