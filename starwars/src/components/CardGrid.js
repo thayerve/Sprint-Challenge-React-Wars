@@ -5,10 +5,8 @@ import { Grid } from "semantic-ui-react";
 
 
 export default function CardGrid() {
-    // define consts incl state
     const [people, setPeople] = useState([]);
 
-    // useEffect API call {}
     useEffect(() => {
         axios.get("https://henry-mock-swapi.herokuapp.com/api")
             .then(response => {
@@ -29,32 +27,3 @@ export default function CardGrid() {
         </Grid >
     )
 }
-// operatorState.map((operator) => <OperatorButton char = {operator.char}/>)
-
-// example from Semantic UI
-// const GridExampleRows = () => (
-//     <Grid columns={3}>
-//       <Grid.Row>
-    //     <Grid.Column>
-    //       <Image src='/images/wireframe/paragraph.png' />
-    //     </Grid.Column>
-    //     <Grid.Column>
-    //       <Image src='/images/wireframe/paragraph.png' />
-    //     </Grid.Column>
-    //   </Grid.Row>
-
-//       <Grid.Row>
-//         <Grid.Column>
-//           <Image src='/images/wireframe/paragraph.png' />
-//         </Grid.Column>
-//         <Grid.Column>
-//           <Image src='/images/wireframe/paragraph.png' />
-//         </Grid.Column>
-//         <Grid.Column>
-//           <Image src='/images/wireframe/paragraph.png' />
-//         </Grid.Column>
-//       </Grid.Row>
-//     </Grid>
-//   )
-
-//   export default GridExampleRows

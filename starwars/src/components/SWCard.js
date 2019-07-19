@@ -3,11 +3,9 @@ import { Grid, Card } from "semantic-ui-react";
 
 
 function SWCard(props) {
-// define consts incl state
     const name = props.name;
     const gender = props.gender;
     const numFilms = props.numFilms;
-    
     
     console.log("SWCard created for ", name);
 
