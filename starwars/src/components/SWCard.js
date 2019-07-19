@@ -1,5 +1,5 @@
 import React from 'react';
-import { Card } from "semantic-ui-react";
+import { Grid, Card } from "semantic-ui-react";
 
 
 function SWCard(props) {
@@ -9,16 +9,18 @@ function SWCard(props) {
     const numFilms = props.numFilms;
     
     
-    console.log("this SWCard fn will create a card");
+    console.log("SWCard created for ", name);
 
 return(
-    <Card>
-      <Card.Content>
-        <Card.Header>{name}</Card.Header>
-        <Card.Meta>Gender: {gender}</Card.Meta>
-        <Card.Description>{name} is a character who appears in {numFilms} Star Wars films.</Card.Description>
-      </Card.Content>
-    </Card>
+    <Grid.Column>
+        <Card>
+        <Card.Content>
+            <Card.Header>{name}</Card.Header>
+            <Card.Meta>Gender: {gender}</Card.Meta>
+            <Card.Description>{name} is a character who appears in {numFilms} Star Wars films.</Card.Description>
+        </Card.Content>
+        </Card>
+    </Grid.Column>
 )
 }
 

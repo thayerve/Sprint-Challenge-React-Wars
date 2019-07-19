@@ -10,20 +10,19 @@ export default function CardGrid() {
 
     // useEffect API call {}
     useEffect(() => {
-        axios.get("https://swapi.co/api/people/")
+        axios.get("https://henry-mock-swapi.herokuapp.com/api")
             .then(response => {
                 console.log("raw response: ", response);
                 setPeople(response.data.results);
-                console.log('new people variable: ', people);
-                              
             })
             .catch(error => console.log(`That's no app...`, error))
 
     }, []);
     if (!people) return <h3>Loading...</h3>;
-
+    console.log('People: ', people);
     return (
-        <Grid >
+        
+        <Grid relaxed stackable columns={4}>
             {people.map((person) =>
                 <SWCard key = {person.name} name={person.name} gender={person.gender} numFilms={person.films.length}/>
             )}

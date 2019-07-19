@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  background-image: './sw-bg.jpg';
 }
 .Header {
   color: #443e3e;
